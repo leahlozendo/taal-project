@@ -62,7 +62,7 @@
                     success:res=>{
                         if(res.AccFound){
                             sessionStorage.setItem("logged", true)
-                            window.location.href = "http://localhost:5000/monitoring.html"
+                            location.href = "/monitoring.html"
                         }else{
                             alert("Account not found!")
                         }
