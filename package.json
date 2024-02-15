@@ -1,10 +1,10 @@
 {
-  "name": "myapp",
+  "name": "taalproject",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./backend/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
