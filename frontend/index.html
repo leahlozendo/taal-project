@@ -52,7 +52,7 @@
                 // console.log($(".username").val())
 
                 $.ajax({
-                    url:"http://localhost:5000/api/taal/accounts",
+                    url:"/api/taal/accounts",
                     method:"POST",
                     data:JSON.stringify({
                         "username":$(".username").val(),

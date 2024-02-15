@@ -119,7 +119,7 @@ index.html
     });
     setInterval(function () {
       $.ajax({
-        url: "http://localhost:5000/api/taal/getreadings/ph",
+        url: "/api/taal/getreadings/ph",
         type: "GET",
         success: function (response) {
           const x = new Date(response.DateTime).getTime()
@@ -155,7 +155,7 @@ index.html
 
           $.ajax({
             method:"POST",
-            url:"http://localhost:5000/api/taal/create",
+            url:"/api/taal/create",
             data:JSON.stringify({
               "DateTime":new Date(response.DateTime),
               "Reading":readings,
@@ -201,7 +201,7 @@ index.html
     });
     setInterval(function () {
       $.ajax({
-        url: "http://localhost:5000/api/taal/getreadings/temperature",
+        url: "/api/taal/getreadings/temperature",
         type: "GET",
         success: function (response) {
           const x = new Date(response.DateTime).getTime()
@@ -234,7 +234,7 @@ index.html
 
           $.ajax({
             method:"POST",
-            url:"http://localhost:5000/api/taal/create",
+            url:"/api/taal/create",
             data:JSON.stringify({
               "DateTime":new Date(response.DateTime),
               "Reading":readings,
@@ -280,7 +280,7 @@ index.html
     });
     setInterval(function () {
       $.ajax({
-        url: "http://localhost:5000/api/taal/getreadings/turbidity",
+        url: "/api/taal/getreadings/turbidity",
         type: "GET",
         success: function (response) {
           const x = new Date(response.DateTime).getTime()
@@ -310,7 +310,7 @@ index.html
 
           $.ajax({
             method:"POST",
-            url:"http://localhost:5000/api/taal/create",
+            url:"/api/taal/create",
             data:JSON.stringify({
               "DateTime":new Date(response.DateTime),
               "Reading":readings,
@@ -337,7 +337,7 @@ index.html
       e.preventDefault()
       console.log("Clicked")
       $.ajax({
-        url:"http://localhost:5000/api/taal/readings",
+        url:"/api/taal/readings",
         method:"POST",
         data:JSON.stringify({
           "startDate":new Date($("#starting-date").val()),
