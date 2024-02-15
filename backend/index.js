@@ -13,7 +13,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // api
 app.post("/api/taal/create", async(req, res)=>{
