@@ -120,12 +120,12 @@ index.html
     setInterval(function () {
       $.ajax({
         url: "/api/taal/getreadings/ph",
-        type: "GET",
+        type: "POST",
         success: function (response) {
           const x = new Date(response.DateTime).getTime()
           
           const readings = parseFloat(response.Reading)
-          console.log(readings)
+          console.log(response, "resp")
           // console.log(x)
           let label
           var panel = $(".ph-panel>h3");
@@ -202,7 +202,7 @@ index.html
     setInterval(function () {
       $.ajax({
         url: "/api/taal/getreadings/temperature",
-        type: "GET",
+        type: "POST",
         success: function (response) {
           const x = new Date(response.DateTime).getTime()
           
@@ -281,7 +281,7 @@ index.html
     setInterval(function () {
       $.ajax({
         url: "/api/taal/getreadings/turbidity",
-        type: "GET",
+        type: "POST",
         success: function (response) {
           const x = new Date(response.DateTime).getTime()
           

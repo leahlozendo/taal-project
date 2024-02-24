@@ -82,7 +82,7 @@ app.post("/api/taal/createaccount", async (req, res) => {
 })
 
 // getting turbidity
-app.get("/api/taal/getreadings/turbidity", async(req, res)=>{
+app.post("/api/taal/getreadings/turbidity", async(req, res)=>{
     const ref = db.ref("/readings/data/turbidity"); // replace with your path
 
     // res.send(ref)
@@ -96,7 +96,7 @@ app.get("/api/taal/getreadings/turbidity", async(req, res)=>{
 });
 
 // getting Acidity
-app.get("/api/taal/getreadings/ph", async(req, res)=>{
+app.post("/api/taal/getreadings/ph", async(req, res)=>{
   const ref = db.ref("/readings/data/ph"); // replace with your path
 
   // res.send(ref)
@@ -110,7 +110,7 @@ ref.once("value", (snapshot) => {
 });
 
 // gettin temperature
-app.get("/api/taal/getreadings/temperature", async(req, res)=>{
+app.post("/api/taal/getreadings/temperature", async(req, res)=>{
   const ref = db.ref("/readings/data/temperature"); // replace with your path
 
   // res.send(ref)
